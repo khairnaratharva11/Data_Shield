@@ -65,10 +65,10 @@ def BackupFiles(Source, Destination):
 
     return Copied_Files
 
-def MarvellousDataShieldStart(Source = "Data"):
+def ASKDataShieldStart(Source = "Data"):
     Border = "-"*50
     print(Border)
-    BackupName = "MarvellousBackup"
+    BackupName = "ASKBackup"
 
     print(Border)
     print("Backup Process Started successfully at : ", time.ctime())
@@ -115,7 +115,7 @@ def main():
         print("Directory Name is :", sys.argv[2])
 
         # Apply the Scheduler 
-        schedule.every(int(sys.argv[1])).minutes.do(MarvellousDataShieldStart, sys.argv[2])
+        schedule.every(int(sys.argv[1])).minutes.do(ASKDataShieldStart, sys.argv[2])
         
         print(Border)
         print("Data Shield System Started Successfully")
